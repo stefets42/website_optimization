@@ -122,7 +122,7 @@ var resizePizzas = function(size) {
                 newWidth = 50; break;
             default:
                 console.log("bug in sizeSwitcher"); }
-        var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+        var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
         for (var i = 0; i < randomPizzas.length; i++) { randomPizzas[i].style.width = newWidth + '%'; }
     }
     changePizzaSizes(size);
@@ -151,7 +151,8 @@ function updatePositions() {
     frame++;
     window.performance.mark("mark_start_frame");
     var items = document.querySelectorAll('.mover');
-    for (var i = 0; i < items.length; i++) { var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; var phase = Math.sin((scrollTop / 1250) + (i % 5));
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    for (var i = 0; i < items.length; i++) { scrollTop ; var phase = Math.sin((scrollTop / 1250) + (i % 5));
         items[i].style.left = items[i].basicLeft + 100 * phase + 'px'; }
     window.performance.mark("mark_end_frame");
     window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
@@ -162,7 +163,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
     var s = 256;
-    for (var i = 0; i < 200; i++) { var elem = document.createElement('img');
+    var rows = height / s;
+    for (var i = 0; i < (rows * cols); i++) { var elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
         elem.style.height = "100px";
