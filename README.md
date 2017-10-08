@@ -24,9 +24,10 @@
 #### Optimizations made in views/js/main.js for pizza.html
 - Created randomPizzas variable
 - Modified changePizzaSizes
-- Replaced querySelectorAll  by getElementsByClassName
+- Replaced querySelectorAll by getElementsByClassName
 - Removed the dot from the classname in the getElementsByClassName function
 - Moved the scrollTop variable outside of the loop inside the updatePositions function
+- Created the height variable
 - Dynamically calculated the number of pizzas needed to fill the background
 
 #### Optimizations made in pizza.html
