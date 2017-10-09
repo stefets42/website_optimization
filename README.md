@@ -21,7 +21,7 @@
 - Removed link to Open Sans fonts
 - Added async to scripts
 
-#### Optimizations made in views/js/main.js for pizza.html
+#### Optimizations made in views/js/main.js
 - Created randomPizzas variable
 - Modified changePizzaSizes
 - Replaced querySelectorAll by getElementsByClassName
@@ -29,6 +29,11 @@
 - Moved the scrollTop variable outside of the loop inside the updatePositions function
 - Created the height variable
 - Dynamically calculated the number of pizzas needed to fill the background
+- Replaced document.querySelector by document.getElementById in the changeSliderLabel function
+- Saved the array length in the for loop of the changePizzaSizes function
+- Declared the pizzasDiv variable outside the loop
+- Replaced document.querySelector by document.getElementById
+- Moved the DOM call outside the for statement and saved it into a local variable
 
 #### Optimizations made in pizza.html
 - Created 2 copies of pizzeria.jpg and optimized each of them for its unique purpose
